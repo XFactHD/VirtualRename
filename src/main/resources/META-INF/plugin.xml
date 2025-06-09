@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>io.github.xfacthd.virtualrename.VirtualRename</id>
+    <name>VirtualRename</name>
+    <!--email="support@yourcompany.com" url="https://www.yourcompany.com"-->
+    <vendor>XFactHD</vendor>
+    <description><![CDATA[Allows temporarily renaming parameters and local variables in read-only files]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.foldingBuilder language="JAVA" implementationClass="io.github.xfacthd.virtualrename.folding.VirtualRenameFoldingBuilder"/>
+    </extensions>
+    <actions>
+        <action id="io.github.xfacthd.virtualrename.action.VirtualRenameAction" class="io.github.xfacthd.virtualrename.action.VirtualRenameAction" text="Virtual Rename...">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt F6"/>
+        </action>
+    </actions>
+</idea-plugin>
